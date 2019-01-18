@@ -1,20 +1,25 @@
-//use express
-let express = require('express');
-//define express app 
-let app = express();
-//import bodyparser middleware
-let bodyParser = require('body-parser');
+const express = require("express");
+const morgan = require("morgan");
 
-//use mogan logging
-app.use('morgan'('common'));
+const blogPostsRouter = require("./blogPostsRouter");
+const app = express();
 
-//when the app loads return the html doc
-app.get('/', (req, res) => {
-    app.sendFile(__dirname, 'views/index.html');
+app.use(morgan("common"));
+app.use(express.json());
+
+app.use("/blog-posts", blogPostsRouter);
+
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
 });
 
+  
 
-//listen to port....
-app.listen(3000, ()=> {console.log("listening to Port 3000");});
+//use static html/css/js files 
+// app.use(express.static('public'));
+//when the app loads return the html doc
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/views/index.html');
+// });
 
 
