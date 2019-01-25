@@ -30,7 +30,7 @@ BlogPosts.create(
 router.get('/', (req, res) => {
     res.json(BlogPosts.get());
   });
-
+  
 //post endpoint for adding new blogs 
 router.post('/', jsonParser, (req, res) => {
     const requiredInput = ['title', 'content', 'author'];
