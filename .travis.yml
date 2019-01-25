@@ -1,4 +1,9 @@
 language: node_js
 node_js: node
-
-
+deploy:
+  provider: heroku
+  api_key:
+    secure: j5H7geBiH6RkjQgtMvu6oL3p6P5h1krt4Pg9+X8/Taqx9M6e+C8wSWwxvqQEOTGy1lb2O80ttrYx+AOt1xV66uICkSiWZ2iQ7Wrh0GVMzheKTG0/10gEwGEADnmhX9prMebd4g//MtzmsMb+9pzy3RnCcVFVuFMw+HwLxUBDCd0F5RJlO+kEF9ICXzvhAebe7heehLA2IgjkYEZcWBovH+gfNNLE+AjfE+vKBopA6y35BOE+9PV82ihmlq1338d4oVBS0YPLDVRH0BZqo7ftF3QErf6yU1fdH7t2lEd0sElTkBLI7FhJASksnTw0MdSZSQx357gRSpjZNzrZ1XUnVkm7qqvrpR37vUreQSW9kiijMg9JlyD6Z8G4YBhLvH44TRmPim9RnN7C+MzK4lEpE1htUodDwEFuE8/Bvxoocaz8V+I/bCm4MfaGuenHr1rk3N7vbeAC5Z4cu+OiStbftZtcTOUOFSXcyMD28446Dadf/vt1LGDu+eux8epa6KJL4SoBNh92SRCTi2rSWDbtA4fumK2iwBSNG1DxUU9wfkXpPYMJW51tu+qj9Kg0YvQUaaIr76CdLuoH3zLIfde47gEyFZHoAPutAnQj/fNjeTLK16G/4WhoV4qUsxJYQBXMCkhcuJRTChl/e7uRulXI0fM0LXEFDlJV0gCN8iRypa0=
+  app: peaceful-dusk-16144
+  on:
+    repo: AdamJDuggan/node-blog-app
